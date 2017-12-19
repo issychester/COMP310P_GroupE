@@ -1,0 +1,139 @@
+html * {
+    font-family: Verdana;
+}
+
+/*Header styling from https://stackoverflow.com/questions/24857495/html-header-with-image-and-text-align-text-to-bottom, retrived on 1st December 2017*/
+
+.header {
+    position: static;
+    padding: 0px 0px 270px 0px;
+}
+.header .image {
+    background: url("headerImage.jpg");
+    width: 100%;
+    min-height: 250px;
+    margin: 0;
+    position: absolute;
+}
+
+.header .text {
+    color: #010101;
+    z-index: 100;
+    position: absolute;
+    float: left;
+    font-size: 60px;
+}
+
+#logo {
+    height: 60px;
+    z-index: 100;
+    position: absolute;
+    float: left;
+    padding: 5px 0px 0px 620px; 
+}
+
+h1 {
+    font-size: 20px;
+    color: darkturquoise;
+    font-weight: bold;
+}
+
+h1.largeFont {
+    font-size: 40px;
+}
+
+.centre {
+    float: right;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    text-align: right;
+    float: right;
+    width: 30%;
+}
+
+p {
+    font-size: 15px;
+}
+
+p.italics {
+    font-style: italic;
+}
+
+#border {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.rightSidePage {
+    float: right;
+    position: relative;
+    top: -450px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.artist {
+    width: 30vw;
+}
+
+.map {
+    max-width: 20vw;
+}
+
+.host {
+    max-width: 5vw;
+}
+
+.inline {
+    display: inline;
+}
+
+.hostRight {
+    float: right;
+    text-align: right;
+}
+
+.blue {
+    color: darkturquoise;
+}
+
+.backButton {
+    float: right;
+    position: relative;
+    top: 0px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.regionLink {
+    float: right;
+    position: relative;
+    top: -100px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+
+.bold {
+    font-weight: bold;
+}
+
+button {
+    background-color: #006666;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+table tr td.tableInformation {
+    font-style: italic;
+    font-size: 10px;
+}
