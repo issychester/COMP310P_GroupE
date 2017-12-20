@@ -15,6 +15,7 @@ $result = mysqli_query($connection, $sql);
 $row = mysqli_fetch_array($result);
 $concertID = $row['concert_ID'];
 
+//Find current quantity for inputted booking_ID
 $oldQuantitySQL = "SELECT quantity FROM booking WHERE booking_ID = '$bookingID'";
 $oldQuantityResult = mysqli_query($connection, $oldQuantitySQL);
 $oldQuantityRow = mysqli_fetch_array($oldQuantityResult);
