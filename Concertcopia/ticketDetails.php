@@ -15,6 +15,11 @@ $result = mysqli_query($connection, $sql);
 $row = mysqli_fetch_array($result);
 $concertID = $row['concert_ID'];
 
+$oldQuantitySQL = "SELECT quantity FROM booking WHERE booking_ID = '$bookingID'";
+$oldQuantityResult = mysqli_query($connection, $oldQuantitySQL);
+$oldQuantityRow = mysqli_fetch_array($oldQuantityResult);
+$oldQuantity = $oldQuantityRow['quantity'];
+
 // To find tickets sold for the concert
 $numberSoldSQL = "SELECT SUM(quantity) FROM `booking` WHERE concert_ID = '$concertID'";
 $numberSoldResult = mysqli_query($connection, $numberSoldSQL);
@@ -38,7 +43,7 @@ $todayDate = date("Y-m-d");
 $todayTime = date("H:i:s");
 
 //Check to see if order can be processed
-if ($quantity > $numberRemaining) {
+if (($quantity-$oldQuantity) > $numberRemaining) {
     if ($numberRemaining == 1) {
         $message = "Sorry there is only 1 ticket left so your order cannot be processed.";
     }
